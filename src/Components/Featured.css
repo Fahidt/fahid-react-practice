@@ -1,0 +1,71 @@
+/* Base styles for smaller screens (no media query) */
+.container {
+  display: flex;
+  align-items: center; /* Horizontally center items */
+  justify-content: center; /* Vertically center items */
+}
+
+.left {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Vertically center items */
+  align-items: center; /* Horizontally center items */
+  margin: 1rem;
+  padding: 2rem;
+  text-align: center;
+  height: 170px;
+  width: auto;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.right {
+  border-left: 5px solid orange;
+  margin: 1rem;
+  padding: 2rem;
+  text-align: center;
+  height: 170px;
+  width: 50%; /* Half of the container's width */
+  overflow: scroll;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.whole_list {
+  padding: 0; /* Remove default padding */
+}
+
+.listed_item,.selected {
+  list-style-type: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.listed_item:hover, .selected {
+
+  color: #333; /* Change text color when hovering */
+  transform: scale(1.1); /* Apply a scaling effect when hovering */
+}
+
+.selected {
+  font-weight: bolder;
+  font-stretch: ultra-condensed;
+}
+
+
+/* Media query for a minimum width of 768px (phone settings) */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .left {
+    /* Add specific styles for larger screens within the media query */
+  }
+
+  .right {
+    /* Add specific styles for larger screens within the media query */
+  }
+
+  .listed_item {
+    /* Add specific styles for listed items on larger screens within the media query */
+  }
+}
